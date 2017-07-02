@@ -1,0 +1,163 @@
+@import "../reset";
+@import "../variables";
+@import "../mixins";
+/*--------------------------------------------------------------
+FILTERABLE CONTENT
+--------------------------------------------------------------*/
+.filters-wrapper{
+		margin-top:$unit-base *2;
+	.container{
+		border:1px solid #dedede;
+		max-width:1100px;
+		margin:auto;
+		padding:$unit-base;
+	}
+	.filters-dropdown-wrapper{
+		display:inline-block;
+		border-bottom:2px solid #dedede;
+		background-color:#f9f9f9;
+		margin-right: $unit-base / 2;
+		text-transform: uppercase;
+		font-size: 17px;
+		font-weight: 400;
+		color:#888888;
+		position:relative;
+		margin-bottom:$unit-base;
+		cursor: pointer;
+@media only screen and (max-width: 580px) {
+		width: 48%;
+    margin: 1%;
+}
+		&:after{
+			@include pseudo(block, absolute, '\f078');
+			right:10px;
+			top:10px;
+			font-family: FontAwesome;
+			pointer-events:none;	
+		}
+		.filters-dropdown{
+			padding:10px 80px 10px 10px ;
+			display: inline-block;
+		}
+	}
+			.filters-dropdown_genres{
+		position: absolute;
+		left: 0;
+		top: 63px;
+		background-color: #f9f9f9;
+		z-index: 1;
+		width:210px;
+		&:before{
+			content: '';
+    position: absolute;
+    left: 23px;
+    width: 15px;
+    height: 15px;
+    background: #f9f9f9;
+    border-top: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    top: -6px;
+		}
+		label{
+			display: block;
+			border:1px solid #dedede;
+			padding:10px 20px 10px 10px ;
+						input{
+				position: relative;
+				vertical-align: middle;
+				bottom: 2px;
+				margin-right: 10px;
+			}
+		}
+		}
+	.filters-searchbar{
+		float:right;
+		position:relative;
+		color:#888888;
+@media only screen and (max-width: 580px) {
+	float:none;
+    width: 98%;
+    margin: 1%;
+}
+
+		&:after{
+			@include pseudo(block, absolute, '\f002');
+			right:10px;
+			top:10px;
+			font-family: FontAwesome;
+		}
+		input{
+			padding:12px 30px 12px 10px;
+			border:1px solid #dedede;
+			width:220px;
+			font-size: 14px;
+			color:#888888;
+			@media only screen and (max-width: 580px) {
+width:100%;
+			}
+		}
+	}
+	.filters-checkbox{
+@media only screen and (max-width: 580px) {
+		
+		width: 98%;
+    margin: 1%;
+}
+	.filters-checkbox_wrapper{
+		display:inline-block;
+			margin-right: 10px;
+			input{
+				position: relative;
+				vertical-align: middle;
+				bottom: 2px;
+				margin-right: 4px;
+			}
+	}	
+	}
+	.filters-clear{
+		float:right;
+		a{
+		text-transform: uppercase;
+		color:$blue;
+		}
+	}
+}
+
+.filterable-content-wrapper{
+	.container{
+		border:1px solid #dedede;
+		max-width:1100px;
+		margin:auto;
+		}
+		.filterable-content{
+			display: flex;
+			flex-wrap:wrap;
+			align-content: flex-start;
+		.filterable-content_card{
+			width: 33.3%;
+			padding:$unit-base;
+			margin-bottom:$unit-base;
+								@media only screen and (max-width: 1000px) {
+		    width:50%;
+		}
+					@media only screen and (max-width: 700px) {
+		    width:100%;
+		}
+		img{
+			max-width:100%;
+		}
+		}
+		.filterable-content_genres{
+			display:inline-block;
+		}
+		.filterable-content_genreslist{
+			display: inline-block;
+			li{
+				display: inline-block;
+			}
+		}
+		}
+}

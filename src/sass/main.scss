@@ -1,0 +1,13 @@
+@import "/reset";
+@import "/variables";
+@import "/mixins";
+
+/*--------------------------------------------------------------
+GLOBAL STYLES
+--------------------------------------------------------------*/
+body{
+	font-family:$primary-font;
+	font-weight:normal;
+}
+
+

@@ -1,0 +1,63 @@
+@import "../reset";
+@import "../variables";
+@import "../mixins";
+/*--------------------------------------------------------------
+TESTIMONIALS WRAPPER
+--------------------------------------------------------------*/
+.testimonial-wrapper{
+	margin:($unit-base * 1.5) auto ($unit-base * 1.2);
+	background-color:$light-grey;
+	.container{
+		max-width:680px;
+		margin:auto;
+		padding:($unit-base * 2.5)0;
+		@media only screen and (max-width: 700px) {
+		    padding-right: $unit-base * 1.5;
+		}
+	}
+	p, span{
+		margin:auto;
+		border-left:1px solid $orange;
+		padding-left:$unit-base * 1.5;
+		color:$grey-text;
+		@media only screen and (max-width: 700px) {
+		    padding-left: $unit-base * 1.75;
+		    margin-left: $unit-base * 2;
+		}
+	}
+	p{
+		font-size:20px;
+		position:relative;
+		font-family:$secondary-font;
+		&:before{
+			@include pseudo(block, absolute, open-quote);
+			font-family:$primary-font;
+			left:-($unit-base);
+			top:-($unit-base);
+			background-color:$orange;
+			color:#fff;
+			width:$unit-base * 2;
+			height:$unit-base * 2;
+			border-radius:50%;
+			border:2px solid #fff;
+		    padding-left: 10px;
+		    font-size: $unit-base * 2.5;
+		}
+	}
+	span{
+		display: block;
+		font-weight: 700;
+		padding-top:$unit-base * 1.5;
+		position:relative;
+		&:before{
+			@include pseudo(block, absolute);
+			left: -6px;
+			top: 43px;
+			background-color: $orange;
+			color: #fff;
+			width: $unit-base / 2;
+			height: $unit-base / 2;
+			border-radius: 50%;
+		}
+	}
+}

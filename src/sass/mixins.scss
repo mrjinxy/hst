@@ -1,0 +1,16 @@
+///Pseudo Elements
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	position:$pos;
+	display:$display;
+}
+
+///Animation
+@mixin anim($speed, $ease){
+	-webkit-transition: $speed $ease;
+	-moz-transition:  $speed $ease;
+	-o-transition: $speed $ease;
+	-ms-transition: $speed $ease;
+	transition: $speed $ease;
+}
+

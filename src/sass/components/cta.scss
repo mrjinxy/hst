@@ -1,0 +1,54 @@
+@import "../reset";
+@import "../variables";
+@import "../mixins";
+/*--------------------------------------------------------------
+CTA
+--------------------------------------------------------------*/
+.cta-wrapper{
+	margin:($unit-base * 1.5) auto ($unit-base * 1.2);
+	background-color:$navy;
+	.container{
+		max-width:1100px;
+		margin:auto;
+		padding:($unit-base * 2.5) 0;
+		display: flex;
+		flex-wrap: wrap;
+		@media only screen and (max-width: 1000px) {
+		padding:($unit-base * 2.5) $unit-base;
+		}
+	}
+
+	p{
+		flex: 5;
+		color:#ccc;
+		line-height:1.5em;
+		padding-right:$unit-base;
+		@media only screen and (max-width: 1000px) {
+				flex: 0 0 100%;
+				margin-bottom: $unit-base;
+			}
+	}
+	a{
+		flex: 1;
+		align-self:center;
+		background-color:$blue;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: .05em;
+		text-transform: uppercase;
+		display: inline-block;
+		text-align: center;
+		border-radius: 3px;
+		padding:19px 48px;
+		color:#fff;
+		cursor:pointer;
+		@include anim(400ms, ease);
+		@media only screen and (max-width: 1000px) {
+		flex: 0 0 100%;
+		    padding: 19px 28px;
+	}
+		&:hover{
+			background-color: lighten($blue, 10%);
+		}
+	}
+}
